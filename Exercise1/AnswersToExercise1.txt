@@ -1,0 +1,14 @@
+Look at the code; do you think that MyClass::operator=() is doing a deep or shallow copy?
+
+    I believe that the overloaded = operator is doing a deep copy. In the function, the operator calls the
+    copy function which allocates new memory for all the data members and copys the datamembers from the
+    original object. We can check this by printing the address of copied objects.
+
+Do you notice any warning posted by the compiler? Is there a memory leak issue? How can you fix it?
+
+    Yes, when I run valgrind ./a.out I see that we lose 4 bytes of memory from running the program. I believe
+    this is because we did not delete
+
+Is MyClass::setIp() implemented correctly? What exactly does it do?
+
+    Yes, I believe it is implemented correctly. When the function is called it correctly sets ip to a new ip.

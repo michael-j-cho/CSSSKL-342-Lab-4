@@ -81,10 +81,12 @@ void MyClass::copy(const MyClass& other)
     i = other.i;
     d = other.d;
     s = other.s;
-
-    //    assert(ip == nullptr);
+    delete ip;
+    ip = nullptr;
+    assert(ip == nullptr);
     ip = new int;
     *ip = *(other.ip);
+
 }
 
 void MyClass::clear()
@@ -98,3 +100,13 @@ void MyClass::clear()
     delete ip;
     ip = nullptr;
 }
+
+class MySubClass : public MyClass {
+    public:
+        MySubClass(int i) {
+            subClassData = i;
+        }
+    private:
+        int subClassData;
+};
+

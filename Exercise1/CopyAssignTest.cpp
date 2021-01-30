@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "MyClass.h"
+// #include "MyClass.cpp"
 
 using namespace std;
 
@@ -41,8 +42,13 @@ int main(int argc, char** argv)
     m2.setI(100);
     m2.setS("This is a NEW test");
     m2.setIp(8);
+    cout << endl << m2.getIp() << endl;
 	// copy m2 to m1
     m1 = m2;
+
+    // Checking that m1 and m2 are deep copies
+    cout << endl << &m1 <<endl << &m2 << endl << endl;
+
     cout << "m1 values:" << endl;
     cout << '\t' << m1.getD() << ", " << m1.getI() << ", " << m1.getS() 
          << ", " << m1.getIp() << endl;
@@ -55,5 +61,7 @@ int main(int argc, char** argv)
     cout << '\t' << m2.getD() << ", " << m2.getI() << ", " << m2.getS() 
          << ", " << m2.getIp() << endl;
 
+    cout << endl << endl;
+ 
     return 0;
 }
