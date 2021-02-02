@@ -46,7 +46,7 @@ SquareContainer<T>::iterator::operator++(int)
 
 // Returns the current item
 template <typename T>
-T& SquareContainer<T>::iterator::operator*()
+T& SquareContainer<T>::iterator::operator*() const
 {
 	// If we're past the end, it's really an error. You could throw an
 	// exception, if you like. Make sure you document the iterator's

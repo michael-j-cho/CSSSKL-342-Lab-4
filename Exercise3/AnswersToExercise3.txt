@@ -1,0 +1,34 @@
+Look at the code in IteratorTest.cpp. What do you think it does? Compile the code 
+(do you need to do anything "unusual" to get it to compile?) and run it. Does it 
+do what you think it would?
+
+    In order to get the code to compile, I have to compile only the "driver" file 
+    IteratorTest.cpp. If I compile everything in the folder, I get redefinition
+    errors.
+
+    Yes, the program does what I think it would. It iterates through the code and
+    sets each element with consecutive numbers. Then, the program iterates through
+    the elements and displays each one.
+
+Why do the iterator increment operators return an iterator? How do the two 
+increment operators differ? Is the iterator they return allocated dynamically, 
+auto, or something else?
+
+    I believe that the increment functions return an iterator because in order
+    for the program to know it's an iterator and act like one, it must return 
+    one.
+
+    They both look the same except one creates a new iterator data type and assigns
+    the pointer to it and the other just returns the pointer. 
+
+    I think they are allocated dynamically beacuse in the main function they are
+    created dynamically.
+
+Change SquareContainer::iterator::operator*() so that it is a const method. What 
+is this supposed to mean? When you try to compile and run the program, what 
+happens? Does this appear to be consistent with the declaration of that operator 
+as const? Why or why not? In your opinion, should that operator be declared const?
+
+    Changing the operator to const prevents the program from changing any values
+    in the function. Running and compiling it works fine. I believe it should be 
+    const because there is nothing in the function that is changing any of the data.
